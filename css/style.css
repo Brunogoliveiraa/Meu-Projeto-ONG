@@ -75,14 +75,14 @@ input, textarea, button {
 }
 
 button {
-  background-color: #006699;
+  background-color: #0f2835;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #004466;
+  background-color: #053852;
 }
 
 /* Rodapé */
