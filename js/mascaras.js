@@ -23,4 +23,15 @@ document.getElementById('cep').addEventListener('input', function (e) {
   if (value.length > 8) value = value.slice(0, 8);
   value = value.replace(/(\d{5})(\d{1,3})$/, '$1-$2');
   e.target.value = value;
+}); 
+
+// Submenu em mobile
+document.querySelectorAll('.has-submenu > a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      parent.classList.toggle('ativo');
+    }
+  });
 });
