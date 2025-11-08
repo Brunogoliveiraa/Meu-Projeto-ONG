@@ -7,19 +7,26 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <img class="logo" src="img/logo.png" >
-  <h1>ONG Esperança Viva</h1>
-  <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-  <nav class="menu">
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="projetos.html">Projetos</a></li>
-    <li><a href="cadastro.html">Cadastro</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-</nav>
-  </header>
+<header role="banner">
+  <div class="header-container">
+    <div class="logo-area">
+      
+      
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html" class="btn-menu">Home</a></li>
+        <li><a href="projetos.html" class="btn-menu">Projetos</a></li>
+        <li><a href="cadastro.html" class="btn-menu">Cadastro</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
   <main>
     <section>
@@ -30,14 +37,10 @@
       <p><strong>Endereço:</strong> Rua da Solidariedade, 123 – São Paulo/SP</p>
     </section>
 
-    <section id="metodologia" class="card">
-      <div class="card" >
-        <h2>Envie uma Mensagem</h2>
-        <form>
-
-          <fieldset>
-
-              <label for="nome">Nome Completo:</label>
+    <section>
+      <h2>Envie uma Mensagem</h2>
+      <form>
+            <label for="nome">Nome Completo:</label>
               <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui..." required>
               <p></p>
               
@@ -45,18 +48,34 @@
               <input type="email" id="email" name="email" placeholder="Digite seu email aqui..." required>
               <p></p>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-          </fieldset>
+            <fieldset>
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" rows="6" maxlength="1000"
+                placeholder="Escreva sua mensagem (até 1000 caracteres)..." required></textarea>
+              <small id="contador">0 / 1000</small>
+            </fieldset>
             <button type="submit">Enviar</button>
-          
-        </form>
-      </div>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 ONG Esperança Viva</p>
+  <footer role="contentinfo" aria-label="Rodapé institucional">
+  <img class="logo" src="img/logo.png" alt="Logotipo da ONG Esperança Viva">
+
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;flex-direction:column;text-align:center">
+    <div>
+      <strong>ONG Esperança Viva</strong><br>
+      Acolhimento e reconstrução para vítimas de desastres naturais.
+    </div>
+    <div style="margin-top:8px">
+        <small>© Esperança Viva — Todos os direitos reservados • 2022–2025</small>        
+        <div style="margin-top:8px">
+          <a href="index.html">Home</a> • 
+          <a href="projetos.html">Projeto</a> • 
+          <a href="cadastro.html">Cadastro</a>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
